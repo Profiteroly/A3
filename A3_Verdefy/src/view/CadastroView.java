@@ -153,7 +153,7 @@ public class CadastroView extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Por favor, preencha todos os campos.");
         return; // Não continua com o processo de cadastro
     }
-        if (UsuarioDAO.verificarEmailEmUso) {
+        if (UsuarioDAO.verificarEmailEmUso(email)) {
         JOptionPane.showMessageDialog(this, "Email já está em uso. Por favor, tente outro email.");
         return;
     }
