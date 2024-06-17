@@ -65,7 +65,7 @@ public class UsuarioDAO {
     return userName;
 }
     
-    public boolean verificarEmailEmUso(String email) {
+    public static boolean verificarEmailEmUso(String email) {
         String sql = "SELECT COUNT(*) FROM usuarios WHERE email = ?";
 
         try (Connection conexao = Conexao.getConnection();
